@@ -4,11 +4,16 @@
     distribution: temurin
     java-version: 17
 
-- name: Set up Android SDK
+-- name: Set up Android SDK
   uses: android-actions/setup-android@v3
+  with:
+    api-level: 33
+    build-tools: 33.0.2
+    components: |
+      platform-tools
+      platforms;android-33
+      build-tools;33.0.2
 
-- name: Install Android SDK packages & accept licenses
-  run: |
-    yes | sdkmanager --licenses
-    sdkmanager "platform-tools" "platforms;android-34" "build-tools;36.0.0"
+- name: Accept Android SDK licenses
+  run: yes | sdkmanager --licenses
 
