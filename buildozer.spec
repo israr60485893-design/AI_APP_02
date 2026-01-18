@@ -1,9 +1,8 @@
 [app]
 title = AI Chat App
 package.name = aichat
-package.domain = org.israr
+package.domain = org.example
 
-source.dir = .
 source.include_exts = py,png,jpg,kv,json
 
 version = 0.1
