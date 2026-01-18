@@ -4,13 +4,15 @@ package.name = aiapp
 package.domain = org.israr
 
 source.dir = .
-source.include_exts = py,png,jpg,kv,txt
+source.include_exts = py,png,jpg,kv
 
-version = 0.1
+entrypoint = main.py
 
 requirements = python3,kivy
 
 orientation = portrait
+
+fullscreen = 0
 
 android.api = 33
 android.minapi = 21
@@ -18,3 +20,10 @@ android.sdk = 33
 android.ndk = 25b
 android.accept_sdk_license = True
 android.build_tools_version = 33.0.2
+
+android.permissions = INTERNET
+
+arch = arm64-v8a,armeabi-v7a
+
+[buildozer]
+log_level = 2
