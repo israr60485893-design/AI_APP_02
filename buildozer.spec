@@ -1,4 +1,6 @@
 [app]
+source.dir = .
+
 title = AI Chat App
 package.name = aichat
 package.domain = org.example
