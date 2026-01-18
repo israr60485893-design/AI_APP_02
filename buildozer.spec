@@ -2,6 +2,8 @@
 title = AI_APP_02
 package.name = aiapp
 package.domain = org.israr
+version = 1.0
+
 
 source.dir = .
 source.include_exts = py,png,jpg,kv
