@@ -11,7 +11,6 @@ version = 0.1
 requirements = python3,kivy,requests
 
 orientation = portrait
-
 fullscreen = 0
 
 android.api = 33
