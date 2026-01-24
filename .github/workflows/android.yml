@@ -1,4 +1,4 @@
-name: Build APK (Docker No-Root)
+name: Build APK (Docker Final)
 
 on:
   workflow_dispatch:
@@ -13,14 +13,16 @@ jobs:
     - name: Checkout repo
       uses: actions/checkout@v4
 
-    - name: Build APK using Docker (NON-ROOT FIX)
+    - name: Build APK using Docker (PERMISSION + ROOT FIX)
       run: |
         docker run --rm \
-          --user 1000:1000 \
+          -e BUILDOZER_ALLOW_ROOT=1 \
+          -e CI=true \
           -v $PWD:/home/user/app \
           kivy/buildozer:latest \
           bash -c "
             cd /home/user/app &&
+            rm -rf .buildozer &&
             buildozer android debug
           "
 
